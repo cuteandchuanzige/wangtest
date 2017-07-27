@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<table class="table table-striped" align="center" border="1">
+    <tr>
+        <td>学生ID</td>
+        <td>学生名</td>
+        <td>学生密码</td>
+        <td>学生性别</td>
+        <td>学生年龄</td>
+        <td>学生所在班级</td>
+        <td>操作</td>
+        <td>操作</td>
+    </tr>
+    <tr th:each="list:${list}">
+        <td th:text="${list.sid}"/>
+        <td th:text="${list.sname}"/>
+        <td th:text="${list.spassword}"/>
+        <td th:text="${list.sex}"/>
+        <td th:text="${list.sage}"/>
+        <td th:text="${list.cname}"/>
+        <td><a th:href="@{delete.action(sid=${list.sid})}">删除</a></td>
+        <td><a th:href="@{selectbyid.action(sid=${list.sid})}">修改</a></td>
+    </tr>
+</table>
+</body>
+</html>

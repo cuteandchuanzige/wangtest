@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body><form class="form-horizontal" action="update" method="post">
+    <input type="hidden" name="sid" th:value="${s.sid}"/>
+    <div class="form-group">
+        <label for="sname" class="col-sm-2 control-label">学生姓名</label>
+        <div class="col-sm-10">
+            <input class="form-control" id="sname" placeholder="sname" th:value="${s.sname}" name="sname">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="spassword" class="col-sm-2 control-label">学生密码</label>
+        <div class="col-sm-10">
+            <input class="form-control" id="spassword" placeholder="sname" th:value="${s.spassword}" name="spassword">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="sex" class="col-sm-2 control-label">学生性别</label>
+        <div class="col-sm-10">
+            <input class="form-control" id="sex" placeholder="sex" th:value="${s.sex}" name="sex">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="sage" class="col-sm-2 control-label">学生年龄</label>
+        <div class="col-sm-10">
+            <input class="form-control" id="sage" placeholder="sage" th:value="${s.sage}" name="sage">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="cid" class="col-sm-2 control-label">学生所在班级</label>
+        <div class="col-sm-10">
+            <input class="form-control" id="cid" placeholder="cid" th:value="${s.cid}" name="cid">
+        </div>
+    </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary">确认修改</button>
+        </div>
+    </div>
+</form>
+
+<!--<form action="update" method="post">-->
+    <!--<table border="1" align="center">-->
+        <!--<tr>-->
+            <!--<td><input name="sid" type="hidden" th:value="${s.sid}"/></td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td>学生姓名</td>-->
+            <!--<td><input name="sname" th:value="${s.sname}"/></td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td>学生密码</td>-->
+            <!--<td><input name="spassword" th:value="${s.spassword}"/></td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td>学生性别</td>-->
+            <!--<td><input name="sex" th:value="${s.sex}"/></td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td>学生年龄</td>-->
+            <!--<td><input name="sage" th:value="${s.sage}"/></td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td>学生所在班级</td>-->
+            <!--<td><input name="cid" th:value="${s.cid}"/></td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td><input type="submit" value="确认修改"/></td>-->
+        <!--</tr>-->
+    <!--</table>-->
+
+<!--</form>-->
+</body>
+</html>
